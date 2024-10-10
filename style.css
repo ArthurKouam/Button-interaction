@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 19px;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+  font-weight: bold;
+}
+.container .button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 18px;
+  padding-right: 50px;
+  position: relative;
+  z-index: 1;
+}
+.container .button .arrow {
+  background-color: black;
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.container .button .arrow .def div {
+  width: 0;
+  height: 3px;
+  transition: width 0.4s, opacity 0.1s;
+  position: relative;
+  background-color: white;
+  transform: translateX(5.1px);
+}
+.container .button .arrow .def div::before, .container .button .arrow .def div::after {
+  content: "";
+  display: block;
+  width: 12px;
+  background-color: white;
+  height: 3px;
+  position: absolute;
+  right: 0;
+  transform-origin: right;
+}
+.container .button .arrow .def div::before {
+  transform: rotate(45deg) translateY(0.8px);
+}
+.container .button .arrow .def div::after {
+  transform: rotate(-45deg) translateY(-0.8px);
+}
+.container .button .text-button {
+  transform: color 0.5s;
+}
+.container .button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: black;
+  z-index: -1;
+  transition: all 0.5s;
+}
+.container .button:hover {
+  color: white;
+}
+.container .button:hover .arrow .def div {
+  width: 22px;
+  opacity: 1;
+}
+.container .button:hover::before {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
